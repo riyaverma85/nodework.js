@@ -1,11 +1,10 @@
 
 const express=require("express");
 const app=express();
+const student=require("./routes/students");
 
-app.get("/",(req,res)=>{
-    res.send("hello world");
-})
+app.use("/students",student)
 
-app.listen(3000,()=>{
-    console.log('server is running on port 3000');
+app.listen(2000,()=>{
+    console.log("server is running on port 2000");
 })
