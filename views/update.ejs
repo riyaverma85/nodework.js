@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightblue">
+    <a href="/">Home</a>
+    <a href="/insert">Insert</a>
+    <a href="/display">Display</a>
+    <a href="/update">Update</a>
+    <a href="/search">Search</a>
+
+    <hr color="red" size="5px">
+    <h1>Student data update page</h1>
+
+    <table border="1" width="400px" height="200px" bgcolor="lightgrey" align="center">
+        <tr>
+            <th>RollNO</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Fees</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+      <% Data.forEach((key)=>{ %>
+        <tr>
+            <td> <%= key.rollno %></td>
+            <td> <%= key.name %></td>
+            <td> <%= key.subject %></td>
+            <td> <%= key.fees %></td>
+             <td>
+                <a href="/editdata/?id=<%= key.id %>">edit</a>
+                
+            </td>
+            <td>
+                <a href="/datadelete/?id=<%= key.id %>">delete</a>
+            </td>
+        </tr>
+      <% }) %>
+
+     </table>
+    
+    <hr color="red" size="5px">
+    www.example.com
+    
+</body>
+</html>
