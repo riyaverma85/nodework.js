@@ -16,10 +16,14 @@
     
     <hr color="red" size="5px">
     <h1>student edit data page</h1>
-    Edit Rollno: <input type="text" value="<%= Data.rollno %>"><br/><br/>
-    Edit Name: <input type="text" value="<%= Data.name %>"><br/><br/>
-    Edit Subject: <input type="text" value="<%= Data.subject %>"><br/><br/>
-    Edit Fees: <input type="text" value="<%= Data.fees %>"><br/><br/>
+    <form action="/editsave" method="post">
+        <input type="hidden" value="<%= Data.id %>" name="id">
+    Edit Rollno: <input type="text" value="<%= Data.rollno %>" name="rollno"><br/><br/>
+    Edit Name: <input type="text" value="<%= Data.name %>" name="name"><br/><br/>
+    Edit Subject: <input type="text" value="<%= Data.subject %>" name="subject"><br/><br/>
+    Edit Fees: <input type="text" value="<%= Data.fees %>" name="fees"><br/><br/>
+    <button>Save</button>
+    </form>
 
     <hr color="red" size="5px">
     www.example.com

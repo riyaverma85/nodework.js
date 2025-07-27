@@ -9,6 +9,8 @@ route.get("/display",stuController.stuDisplay);
 route.get("/update",stuController.updatepage);
 route.get("/datadelete",stuController.dataDelete);
 route.get("/editdata",stuController.editPage);
+route.post("/editsave",stuController.editsave);
+
 
 
 module.exports=route;

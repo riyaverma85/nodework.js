@@ -40,6 +40,19 @@ const editPage=async(req,res)=>{
     res.render("editdata",{Data:stuData});
 
 }
+const editsave=async(req,res)=>{
+    const {id,rollno,name,subject,fees}=req.body;
+    await stuModel.findByIdAndUpdate(id,{
+        rollno:rollno,
+        name:name,
+        subject:subject,
+        fees:fees
+    })
+    const student=await stuModel.find();
+    res.render("update",{Data:student});
+    
+
+}
 module.exports={
     homepage,
     insertpage, 
@@ -47,6 +60,8 @@ module.exports={
     stuDisplay,
     updatepage,
     dataDelete,
-    editPage
+    editPage,
+    editsave
+    
     
 }
