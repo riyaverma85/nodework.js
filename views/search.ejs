@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightblue">
+    <a href="/">Home</a>
+    <a href="/insert">Insert</a>
+    <a href="/display">Display</a>
+    <a href="/update">Update</a>
+    <a href="/search">Search</a>
+    
+    <hr color="red" size="5px">
+    <h1>Welcome to my search page</h1>
+    <form action="/searchdata" method="post">
+    Enter Rollno: <input type="text" name="rollno">
+    <button>Search</button>
+    </form>
+    <hr color="red" size="5px">
+
+    <% Data.forEach((key)=>{ %>
+        <h2>Rollno: <%= key.rollno %></h2>
+        <h2>Name: <%= key.name %></h2>
+        <h2>Subject: <%= key.subject %></h2>
+        <h2>Fees: <%= key.fees %></h2>
+   <% }) %>
+    www.example.com
+    
+</body>
+</html>

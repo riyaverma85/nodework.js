@@ -50,8 +50,15 @@ const editsave=async(req,res)=>{
     })
     const student=await stuModel.find();
     res.render("update",{Data:student});
-    
-
+}
+const searchPage=async(req,res)=>{
+    const data=[];
+    res.render("search",{Data:data});
+}
+const searchData=async(req,res)=>{
+    const {rollno}=req.body;
+    const data=await stuModel.find({rollno:rollno});
+    res.render("search",{Data:data});
 }
 module.exports={
     homepage,
@@ -61,7 +68,9 @@ module.exports={
     updatepage,
     dataDelete,
     editPage,
-    editsave
+    editsave,
+    searchPage,
+    searchData
     
     
 }

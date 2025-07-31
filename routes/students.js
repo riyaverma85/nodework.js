@@ -10,6 +10,9 @@ route.get("/update",stuController.updatepage);
 route.get("/datadelete",stuController.dataDelete);
 route.get("/editdata",stuController.editPage);
 route.post("/editsave",stuController.editsave);
+route.get("/search",stuController.searchPage);
+route.post("/searchdata",stuController.searchData);
+
 
 
 
